@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
+    <uuidDadoSerializado>3900452-f692ba0e-ae1e-4333-b59a-5e5bfe3a79be</uuidDadoSerializado>
+	<tipoDadoSerializado>2</tipoDadoSerializado>
+	<codIbge>5201405</codIbge>
+	<cnesDadoSerializado>3900452</cnesDadoSerializado>
+	<numLote>102050</numLote>
+	<ns4:cadastroIndividualTransport>
+		<condicoesDeSaude>
+			<statusEhDependenteAlcool>false</statusEhDependenteAlcool>
+			<statusEhDependenteOutrasDrogas>false</statusEhDependenteOutrasDrogas>
+			<statusEhFumante>false</statusEhFumante>
+			<statusEstaAcamado>false</statusEstaAcamado>
+			<statusEstaDomiciliado>false</statusEstaDomiciliado>
+			<statusTemDiabetes>false</statusTemDiabetes>
+			<statusTemDoencaRespiratoria>false</statusTemDoencaRespiratoria>
+			<statusTemHanseniase>false</statusTemHanseniase>
+			<statusTemHipertensaoArterial>false</statusTemHipertensaoArterial>
+			<statusTemTeveCancer>false</statusTemTeveCancer>
+			<statusTemTeveDoencasRins>false</statusTemTeveDoencasRins>
+			<statusTemTuberculose>false</statusTemTuberculose>
+			<statusTeveAvcDerrame>false</statusTeveAvcDerrame>
+			<statusTeveDoencaCardiaca>false</statusTeveDoencaCardiaca>
+			<statusTeveInfarto>false</statusTeveInfarto>
+		</condicoesDeSaude>
+		<emSituacaoDeRua>
+			<statusSituacaoRua>false</statusSituacaoRua>
+		</emSituacaoDeRua>
+		<fichaAtualizada>false</fichaAtualizada>
+		<identificacaoUsuarioCidadao>
+			<codigoIbgeMunicipioNascimento>2928109</codigoIbgeMunicipioNascimento>
+			<dataNascimentoCidadao>-244339200</dataNascimentoCidadao>
+			<desconheceNomeMae>false</desconheceNomeMae>
+			<nacionalidadeCidadao>1</nacionalidadeCidadao>
+			<nomeCidadao>DIONISIO DE JEUS SOUSA</nomeCidadao>
+			<nomeMaeCidadao>VITORIA CLARA DE JESUS</nomeMaeCidadao>
+            <cnsCidadao>898000370903171</cnsCidadao>			<telefoneCelular>62999999999</telefoneCelular>
+			<paisNascimento>31</paisNascimento>
+			<racaCorCidadao>6</racaCorCidadao>
+			<sexoCidadao>0</sexoCidadao>
+						<desconheceNomePai>true</desconheceNomePai>			
+			<stForaArea>true</stForaArea>
+		</identificacaoUsuarioCidadao>
+		<informacoesSocioDemograficas>
+            <statusFrequentaEscola>false</statusFrequentaEscola>
+            <statusMembroPovoComunidadeTradicional>false</statusMembroPovoComunidadeTradicional>
+            <statusPossuiPlanoSaudePrivado>false</statusPossuiPlanoSaudePrivado>
+            <statusTemAlgumaDeficiencia>false</statusTemAlgumaDeficiencia>
+        </informacoesSocioDemograficas>
+		<saidaCidadaoCadastro />
+		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
+		<tpCdsOrigem>3</tpCdsOrigem>
+		<uuid>3900452-f692ba0e-ae1e-4333-b59a-5e5bfe3a79be</uuid>
+		<uuidFichaOriginadora>3900452-f692ba0e-ae1e-4333-b59a-5e5bfe3a79be</uuidFichaOriginadora>
+		<headerTransport>
+			<profissionalCNS>898002751745425</profissionalCNS>
+			<cboCodigo_2002>223565</cboCodigo_2002>
+			<cnes>3900452</cnes>
+			<ine>0001683713</ine>
+			<dataAtendimento>1621574378</dataAtendimento>
+			<codigoIbgeMunicipio>5201405</codigoIbgeMunicipio>
+		</headerTransport>
+	</ns4:cadastroIndividualTransport>
+	<ns2:remetente>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>37942539000250</cpfOuCnpj>
+		<nomeOuRazaoSocial>UNIDADE BASICA DE SAUDE DELFIORI</nomeOuRazaoSocial>
+		<versaoSistema>3</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>37942539000250</cpfOuCnpj>
+		<nomeOuRazaoSocial>UNIDADE BASICA DE SAUDE DELFIORI</nomeOuRazaoSocial>
+		<versaoSistema>3</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:originadora>
+    <versao major="4" minor="0" revision="0" />
+</ns3:dadoTransporteTransportXml>

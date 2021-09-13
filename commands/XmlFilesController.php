@@ -12,6 +12,7 @@ use DateTime;
 use yii\console\Controller;
 use yii\console\ExitCode;
 use thamtech\uuid\helpers\UuidHelper;
+use yii\helpers\VarDumper;
 use yii\web\NotFoundHttpException;
 use app\models\Cidadao;
 use app\models\CidadaoSearch;
@@ -35,7 +36,8 @@ class XmlFilesController extends Controller
     public function actionIndex()
     {
         // GERAÇÃO INDIVIDUAL
-        /*$model = $this->findModel(1);
+        /*$model = $this->findModel(4);
+        $model->lote = '102030';
         $model->uuid = '3900452'.'-'.UuidHelper::uuid();
         $model->codigoIbge = '5201405'; // COD IBGE APARECIDA
         $model->cnpj = '37942539000250'; // CNPJ DO ESTABELECIMENTO
@@ -50,21 +52,22 @@ class XmlFilesController extends Controller
         $model->paciente_racaCor = $this->racaCorCidadao($model->paciente_racaCor_valor);
         $model->etnia_indigena = $model->paciente_racaCor === 5 ? $this->etniaIndigena() : null;
         $model->paciente_sexo = $this->sexoCidadao($model->paciente_enumSexoBiologico);
-        $model->paciente_dataNascimento = strtotime(DateTime::createFromFormat('d/m/Y', '10/10/2021')->format('Y-m-d'));
-        $model->vacina_dataAplicacao = $this->randomDateTime()['date'];
+        $model->dataAtendimento = $this->randomDateTime()['date'];
         $model->turno_atendimento = $this->randomDateTime()['turno'];
+        $model->statusEhGestante = $this->statusEhGestante($model->paciente_sexo, $model->paciente_dataNascimento, $model->dataAtendimento);
+        $model->paciente_dataNascimento = strtotime(DateTime::createFromFormat('d/m/Y', $model->paciente_dataNascimento)->format('Y-m-d'));
 
-        $cidadao = $this->renderPartial('_ficha_cidadao', ['model' => $model]);
-        $procedimento = $this->renderPartial('_ficha_procedimento', ['model' => $model]);
-        file_put_contents(Yii::getAlias('@app/web/lote-fichas/Cadastro_Individual-') . $model->uuid . '.esus.xml', $cidadao);
-        file_put_contents(Yii::getAlias('@app/web/lote-fichas/Procedimentos-') . $model->uuid . '.esus.xml', $procedimento);*/
+        //$cidadao = $this->renderPartial('_ficha_cidadao', ['model' => $model]);
+        //file_put_contents(Yii::getAlias('@app/web/lote-fichas/Cadastro_Individual-') . $model->uuid . '.esus.xml', $cidadao);
+        //$procedimento = $this->renderPartial('_ficha_procedimento', ['model' => $model]);
+        //file_put_contents(Yii::getAlias('@app/web/lote-fichas/Procedimentos-') . $model->uuid . '.esus.xml', $procedimento);*/
 
         // GERAÇÃO EM MASSA
-        $rows = Cidadao::find()->limit(5)->all();
+        $rows = Cidadao::find()->where(['!=', 'paciente_cpf', ''])->all(); //->limit(100)
         foreach($rows as $model){
-            if(!$model->paciente_cpf && !$model->paciente_cns)
+            if(!$model->paciente_cpf && !$model->paciente_cns || strlen($model->paciente_cns) < 15 && $model->paciente_cpf)
                 continue;
-            $model->lote = '102030';
+            $model->lote = '102050';
             $model->uuid = '3900452'.'-'.UuidHelper::uuid();
             $model->codigoIbge = '5201405'; // COD IBGE APARECIDA
             $model->cnpj = '37942539000250'; // CNPJ DO ESTABELECIMENTO
@@ -79,13 +82,13 @@ class XmlFilesController extends Controller
             $model->paciente_racaCor = $this->racaCorCidadao($model->paciente_racaCor_valor);
             $model->etnia_indigena = $model->paciente_racaCor === 5 ? $this->etniaIndigena() : null;
             $model->paciente_sexo = $this->sexoCidadao($model->paciente_enumSexoBiologico);
-            $model->statusEhGestante = $this->statusEhGestante($model->paciente_sexo, $model->paciente_dataNascimento);
-            $model->paciente_dataNascimento = strtotime(DateTime::createFromFormat('d/m/Y', $model->paciente_dataNascimento)->format('Y-m-d'));
-            $model->vacina_dataAplicacao = $this->randomDateTime()['date'];
+            $model->dataAtendimento = $this->randomDateTime()['date'];
             $model->turno_atendimento = $this->randomDateTime()['turno'];
+            $model->statusEhGestante = $this->statusEhGestante($model->paciente_sexo, $model->paciente_dataNascimento, $model->dataAtendimento);
+            $model->paciente_dataNascimento = strtotime(DateTime::createFromFormat('d/m/Y', $model->paciente_dataNascimento)->format('Y-m-d'));
 
             $cidadao = $this->renderPartial('_ficha_cidadao', ['model' => $model]);
-            file_put_contents(Yii::getAlias('@app/web/lote-fichas/Cadastro_Individual-') . $model->uuid . '.esus.xml', $cidadao);
+            file_put_contents(Yii::getAlias('@app/web/lote-405052-cpf/Cadastro_Individual-') . $model->uuid . '.esus.xml', $cidadao);
             //$procedimento = $this->renderPartial('_ficha_procedimento', ['model' => $model]);
             //file_put_contents(Yii::getAlias('@app/web/lote-fichas/Procedimentos-') . $model->uuid . '.esus.xml', $procedimento);
         }
@@ -164,12 +167,14 @@ class XmlFilesController extends Controller
         return $etnias[$key];
     }
 
-    protected function statusEhGestante($sexo, $idade)
+    protected function statusEhGestante($sexo, $idade, $dataAtendimento)
     {
-        $now = date('Y');
-        $old = date_create_from_format('d/m/Y', $idade)->format('Y');
-        $age = $now - $old;
-        return $sexo == 1 && $age >= 9 || $age <= 60 ? true : false;
+        if($sexo === 0) return null;
+
+        $start = date('Y', $dataAtendimento);
+        $end = date_create_from_format('d/m/Y', $idade)->format('Y');
+        $age = $start - $end;
+        return $age >= 9 && $age <= 60 ? true : false;
     }
 
     protected function randomDateTime()

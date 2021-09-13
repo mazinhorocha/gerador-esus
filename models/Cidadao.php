@@ -23,7 +23,7 @@ use Yii;
  * @property string|null $paciente_endereco_bairro
  * @property string|null $paciente_endereco_cep
  * @property string|null $ibge_municipio_nascimento
- * @property string|null $vacina_dataAplicacao
+ * @property string|null $dataAtendimento
  */
 class Cidadao extends \yii\db\ActiveRecord
 {
@@ -68,7 +68,7 @@ class Cidadao extends \yii\db\ActiveRecord
             [['paciente_endereco_nmMunicipio'], 'string', 'max' => 20],
             [['paciente_endereco_bairro'], 'string', 'max' => 48],
             [['paciente_endereco_cep'], 'string', 'max' => 8],
-            [['ibge_municipio_nascimento', 'vacina_dataAplicacao', 'telefone'], 'string', 'max' => 100],
+            [['ibge_municipio_nascimento', 'dataAtendimento', 'telefone'], 'string', 'max' => 100],
         ];
     }
 

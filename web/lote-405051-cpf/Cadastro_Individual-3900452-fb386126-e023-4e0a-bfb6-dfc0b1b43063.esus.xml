@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
+    <uuidDadoSerializado>3900452-fb386126-e023-4e0a-bfb6-dfc0b1b43063</uuidDadoSerializado>
+	<tipoDadoSerializado>2</tipoDadoSerializado>
+	<codIbge>5201405</codIbge>
+	<cnesDadoSerializado>3900452</cnesDadoSerializado>
+	<numLote>102050</numLote>
+	<ns4:cadastroIndividualTransport>
+		<condicoesDeSaude>
+			<statusEhDependenteAlcool>false</statusEhDependenteAlcool>
+			<statusEhDependenteOutrasDrogas>false</statusEhDependenteOutrasDrogas>
+			<statusEhFumante>false</statusEhFumante>
+			<statusEstaAcamado>false</statusEstaAcamado>
+			<statusEstaDomiciliado>false</statusEstaDomiciliado>
+			<statusTemDiabetes>false</statusTemDiabetes>
+			<statusTemDoencaRespiratoria>false</statusTemDoencaRespiratoria>
+			<statusTemHanseniase>false</statusTemHanseniase>
+			<statusTemHipertensaoArterial>false</statusTemHipertensaoArterial>
+			<statusTemTeveCancer>false</statusTemTeveCancer>
+			<statusTemTeveDoencasRins>false</statusTemTeveDoencasRins>
+			<statusTemTuberculose>false</statusTemTuberculose>
+			<statusTeveAvcDerrame>false</statusTeveAvcDerrame>
+			<statusTeveDoencaCardiaca>false</statusTeveDoencaCardiaca>
+			<statusTeveInfarto>false</statusTeveInfarto>
+		</condicoesDeSaude>
+		<emSituacaoDeRua>
+			<statusSituacaoRua>false</statusSituacaoRua>
+		</emSituacaoDeRua>
+		<fichaAtualizada>false</fichaAtualizada>
+		<identificacaoUsuarioCidadao>
+			<codigoIbgeMunicipioNascimento>5208707</codigoIbgeMunicipioNascimento>
+			<dataNascimentoCidadao>-217468800</dataNascimentoCidadao>
+			<desconheceNomeMae>false</desconheceNomeMae>
+			<nacionalidadeCidadao>1</nacionalidadeCidadao>
+			<nomeCidadao>ITAMAR GONCALVES DE MELO</nomeCidadao>
+			<nomeMaeCidadao>IRACEMA GONCALVES DE MELO</nomeMaeCidadao>
+            <cpfCidadao>28886585187</cpfCidadao>
+			<telefoneCelular>62999999999</telefoneCelular>
+			<paisNascimento>31</paisNascimento>
+			<racaCorCidadao>6</racaCorCidadao>
+			<sexoCidadao>0</sexoCidadao>
+						<desconheceNomePai>true</desconheceNomePai>			
+			<stForaArea>true</stForaArea>
+		</identificacaoUsuarioCidadao>
+		<informacoesSocioDemograficas>
+            <statusFrequentaEscola>false</statusFrequentaEscola>
+            <statusMembroPovoComunidadeTradicional>false</statusMembroPovoComunidadeTradicional>
+            <statusPossuiPlanoSaudePrivado>false</statusPossuiPlanoSaudePrivado>
+            <statusTemAlgumaDeficiencia>false</statusTemAlgumaDeficiencia>
+        </informacoesSocioDemograficas>
+		<saidaCidadaoCadastro />
+		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
+		<tpCdsOrigem>3</tpCdsOrigem>
+		<uuid>3900452-fb386126-e023-4e0a-bfb6-dfc0b1b43063</uuid>
+		<uuidFichaOriginadora>3900452-fb386126-e023-4e0a-bfb6-dfc0b1b43063</uuidFichaOriginadora>
+		<headerTransport>
+			<profissionalCNS>898002751745425</profissionalCNS>
+			<cboCodigo_2002>223565</cboCodigo_2002>
+			<cnes>3900452</cnes>
+			<ine>0001683713</ine>
+			<dataAtendimento>1621907783</dataAtendimento>
+			<codigoIbgeMunicipio>5201405</codigoIbgeMunicipio>
+		</headerTransport>
+	</ns4:cadastroIndividualTransport>
+	<ns2:remetente>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>37942539000250</cpfOuCnpj>
+		<nomeOuRazaoSocial>UNIDADE BASICA DE SAUDE DELFIORI</nomeOuRazaoSocial>
+		<versaoSistema>3</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>37942539000250</cpfOuCnpj>
+		<nomeOuRazaoSocial>UNIDADE BASICA DE SAUDE DELFIORI</nomeOuRazaoSocial>
+		<versaoSistema>3</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:originadora>
+    <versao major="4" minor="0" revision="0" />
+</ns3:dadoTransporteTransportXml>

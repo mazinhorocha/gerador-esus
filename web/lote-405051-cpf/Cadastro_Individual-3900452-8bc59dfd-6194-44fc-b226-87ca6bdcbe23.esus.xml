@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
+    <uuidDadoSerializado>3900452-8bc59dfd-6194-44fc-b226-87ca6bdcbe23</uuidDadoSerializado>
+	<tipoDadoSerializado>2</tipoDadoSerializado>
+	<codIbge>5201405</codIbge>
+	<cnesDadoSerializado>3900452</cnesDadoSerializado>
+	<numLote>102050</numLote>
+	<ns4:cadastroIndividualTransport>
+		<condicoesDeSaude>
+			<statusEhDependenteAlcool>false</statusEhDependenteAlcool>
+			<statusEhDependenteOutrasDrogas>false</statusEhDependenteOutrasDrogas>
+			<statusEhFumante>false</statusEhFumante>
+			<statusEstaAcamado>false</statusEstaAcamado>
+			<statusEstaDomiciliado>false</statusEstaDomiciliado>
+			<statusTemDiabetes>false</statusTemDiabetes>
+			<statusTemDoencaRespiratoria>false</statusTemDoencaRespiratoria>
+			<statusTemHanseniase>false</statusTemHanseniase>
+			<statusTemHipertensaoArterial>false</statusTemHipertensaoArterial>
+			<statusTemTeveCancer>false</statusTemTeveCancer>
+			<statusTemTeveDoencasRins>false</statusTemTeveDoencasRins>
+			<statusTemTuberculose>false</statusTemTuberculose>
+			<statusTeveAvcDerrame>false</statusTeveAvcDerrame>
+			<statusTeveDoencaCardiaca>false</statusTeveDoencaCardiaca>
+			<statusTeveInfarto>false</statusTeveInfarto>
+		</condicoesDeSaude>
+		<emSituacaoDeRua>
+			<statusSituacaoRua>false</statusSituacaoRua>
+		</emSituacaoDeRua>
+		<fichaAtualizada>false</fichaAtualizada>
+		<identificacaoUsuarioCidadao>
+			<codigoIbgeMunicipioNascimento>5218003</codigoIbgeMunicipioNascimento>
+			<dataNascimentoCidadao>744681600</dataNascimentoCidadao>
+			<desconheceNomeMae>false</desconheceNomeMae>
+			<nacionalidadeCidadao>1</nacionalidadeCidadao>
+			<nomeCidadao>WELIKA RIBEIRO DA SILVA</nomeCidadao>
+			<nomeMaeCidadao>DEUSDETINA RIBEIRO DOS SANTOS</nomeMaeCidadao>
+            <cpfCidadao>04281848126</cpfCidadao>
+			<telefoneCelular>62999999999</telefoneCelular>
+			<paisNascimento>31</paisNascimento>
+			<racaCorCidadao>6</racaCorCidadao>
+			<sexoCidadao>1</sexoCidadao>
+						<desconheceNomePai>true</desconheceNomePai>			
+			<stForaArea>true</stForaArea>
+		</identificacaoUsuarioCidadao>
+		<informacoesSocioDemograficas>
+            <statusFrequentaEscola>false</statusFrequentaEscola>
+            <statusMembroPovoComunidadeTradicional>false</statusMembroPovoComunidadeTradicional>
+            <statusPossuiPlanoSaudePrivado>false</statusPossuiPlanoSaudePrivado>
+            <statusTemAlgumaDeficiencia>false</statusTemAlgumaDeficiencia>
+        </informacoesSocioDemograficas>
+		<saidaCidadaoCadastro />
+		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
+		<tpCdsOrigem>3</tpCdsOrigem>
+		<uuid>3900452-8bc59dfd-6194-44fc-b226-87ca6bdcbe23</uuid>
+		<uuidFichaOriginadora>3900452-8bc59dfd-6194-44fc-b226-87ca6bdcbe23</uuidFichaOriginadora>
+		<headerTransport>
+			<profissionalCNS>898002751745425</profissionalCNS>
+			<cboCodigo_2002>223565</cboCodigo_2002>
+			<cnes>3900452</cnes>
+			<ine>0001683713</ine>
+			<dataAtendimento>1616221041</dataAtendimento>
+			<codigoIbgeMunicipio>5201405</codigoIbgeMunicipio>
+		</headerTransport>
+	</ns4:cadastroIndividualTransport>
+	<ns2:remetente>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>37942539000250</cpfOuCnpj>
+		<nomeOuRazaoSocial>UNIDADE BASICA DE SAUDE DELFIORI</nomeOuRazaoSocial>
+		<versaoSistema>3</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:remetente>
+	<ns2:originadora>
+		<contraChave>TREINAMENTO</contraChave>
+		<uuidInstalacao>TREINAMENTO</uuidInstalacao>
+		<cpfOuCnpj>37942539000250</cpfOuCnpj>
+		<nomeOuRazaoSocial>UNIDADE BASICA DE SAUDE DELFIORI</nomeOuRazaoSocial>
+		<versaoSistema>3</versaoSistema>
+		<nomeBancoDados>Postgres</nomeBancoDados>
+	</ns2:originadora>
+    <versao major="4" minor="0" revision="0" />
+</ns3:dadoTransporteTransportXml>

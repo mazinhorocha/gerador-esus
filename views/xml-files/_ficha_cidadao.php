@@ -16,7 +16,6 @@
 			<statusEhDependenteAlcool>false</statusEhDependenteAlcool>
 			<statusEhDependenteOutrasDrogas>false</statusEhDependenteOutrasDrogas>
 			<statusEhFumante>false</statusEhFumante>
-			<?= $model->statusEhGestante ? '<statusEhGestante>false</statusEhGestante>' : null ?>
 			<statusEstaAcamado>false</statusEstaAcamado>
 			<statusEstaDomiciliado>false</statusEstaDomiciliado>
 			<statusTemDiabetes>false</statusTemDiabetes>
@@ -41,7 +40,7 @@
 			<nacionalidadeCidadao>1</nacionalidadeCidadao>
 			<nomeCidadao><?= $model->paciente_nome ?></nomeCidadao>
 			<nomeMaeCidadao><?= $model->paciente_nome_mae ?></nomeMaeCidadao>
-            <?= $model->paciente_cns ? "<cnsCidadao>{$model->paciente_cns}</cnsCidadao>" : "<cpfCidadao>{$model->paciente_cpf}</cpfCidadao>"; ?>
+            <cpfCidadao><?=$model->paciente_cpf ?></cpfCidadao>
 			<telefoneCelular><?= $model->telefone ?: '62999999999' ?></telefoneCelular>
 			<paisNascimento>31</paisNascimento>
 			<racaCorCidadao><?= $model->paciente_racaCor ?></racaCorCidadao>
@@ -66,7 +65,7 @@
 			<cboCodigo_2002><?= $model->profissional_cbo ?></cboCodigo_2002>
 			<cnes><?= $model->cnes ?></cnes>
 			<ine><?= $model->profissional_ine ?></ine>
-			<dataAtendimento><?= $model->vacina_dataAplicacao ?></dataAtendimento>
+			<dataAtendimento><?= $model->dataAtendimento ?></dataAtendimento>
 			<codigoIbgeMunicipio><?= $model->codigoIbge ?></codigoIbgeMunicipio>
 		</headerTransport>
 	</ns4:cadastroIndividualTransport>
